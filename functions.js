@@ -54,6 +54,11 @@ function channelHasVideo(videoTitle, channel) {
 
   return found
 
+  // let array = channel.videos;
+  // return channels.find()
+
+
+
 }
 
 
@@ -71,7 +76,7 @@ function channelHasVideo(videoTitle, channel) {
  ****************************************************************/
 function getChannelByName(channelName, channels) {
 
-  return channels.find(channel => channel.name === channelName)
+  return channels.find(c => c.name === channelName)
 
 }
 
@@ -87,6 +92,7 @@ function getChannelByName(channelName, channels) {
  ****************************************************************/
 function getChannelByVideoTitle(videoTitle, channels) {
   return channels.find(channel => channelHasVideo(videoTitle, channel))
+
 }
 
 
@@ -101,7 +107,7 @@ function getChannelByVideoTitle(videoTitle, channels) {
  * Hint: use string method `.includes()` and iteration method `.filter()`
  ****************************************************************/
 function searchChannels(query, channels) {
-  let ChannelArray = channels.filter((channel) => channel.name.includes(query) || channel.description.includes(query));
+  let ChannelArray = channels.filter((c) => c.name.includes(query) || c.description.includes(query));
   return ChannelArray;
 
 
